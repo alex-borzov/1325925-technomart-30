@@ -32,10 +32,10 @@
         </form>
         <ul class="buyer-assistance-list">
           <li class="buyer-assistance-item">
-            <a class="buyer-assistance-link bookmarks" href="#">Закладки</a>
+            <a class="buyer-assistance-link bookmarks" href="#">Закладки: <span.>0</span.></a>
           </li>
           <li class="buyer-assistance-item">
-            <a class="buyer-assistance-link basket" href="#">Карзина</a>
+            <a class="buyer-assistance-link basket filled-basket" href="#">Карзина: <span>10</span></a>
           </li>
           <li class="buyer-assistance-item">
             <a class="buyer-assistance-link place-order" href="#">Оформить заказ</a>
@@ -55,12 +55,23 @@
         </address>
       </div>
       <form class="personal-account" action="">
-        <button type="button"></button>
+        <button class="personal-accaunt-button" type="button">
+          <svg width="20" height="18" fill="#C5C5C5" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M17.881 14.166c-2.144-.735-4.256-1.666-5.207-2.39-.657-.501-.77-1.618-.517-2.415 1.118-.903 1.864-2.477 1.864-4.278C14.021 2.276 12.221 0 10 0S5.979 2.276 5.979 5.083c0 1.801.746 3.374 1.863 4.277.253.798.141 1.915-.517 2.416-.95.724-3.063 1.654-5.207 2.39C-.026 14.902 0 18 0 18h20s.025-3.099-2.119-3.834z" />
+          </svg>
+        </button>
         <label class="personal-account-ladel" for="user_name">
           <input class="personal-account-input" type="text" name="user_name" placeholder="Равшан Джамшутович">
           Мои заказы &bull; Личный кабинет
         </label>
-        <button type="button"></button>
+        <button class="login-out-button" type="button">
+          <svg width="20" height="17" fill="#c5c5c5" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 8.5L11.12 0v6h-6v5h6v6L20 8.5z" />
+            <path
+              d="M2.1 13.95V3.05c.02-.38.18-1.06 1.02-1.06h5.02V0H3.12C.94 0 .12 1.81.09 3.03v10.94C.1 15.2.94 17 3.12 17h5.02v-1.99H3.12c-.84 0-1-.68-1.01-1.06z" />
+          </svg>
+        </button>
       </form>
     </div>
 
@@ -79,7 +90,7 @@
 
   <main class="page-catalog">
     <div class="container">
-      <h1>Большой выбор товаров на любой вкус</h1>
+      <h1 class="visually-hidden">Большой выбор товаров на любой вкус</h1>
       <ul class="bread-crumbs">
         <li>
           <a class="bread-crumbs-link" href="index.html"><span>Главная</span></a>

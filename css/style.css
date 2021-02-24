@@ -169,8 +169,9 @@ input[type="radio"].visually-hidden {
 }
 
 /*не работает(  */
-.search-input:focus + .lope {
+.search-input:focus + svg {
   fill: var(--basic-red);
+  opacity: 1;
 }
 
 .buyer-assistance-list {
@@ -226,6 +227,10 @@ input[type="radio"].visually-hidden {
 
 .basket {
   padding-left: 49px;
+}
+
+.filled-basket {
+  background-color: var(--basic-red);
 }
 
 .basket::before {
@@ -341,20 +346,13 @@ input[type="radio"].visually-hidden {
   left: 19px;
 }
 
-/* не работает */
 .login-link:hover + .icon-login path {
   fill: var(--basic-dark-grey);
 }
 
-/* .login-link::before {
-  position: absolute;
-  content: "";
-  top: 14px;
-  left: 19px;
-  width: 20px;
-  height: 17px;
-  background-image: url("../img/icon-login.svg");
-} */
+.login-link:active + .icon-login path {
+  fill: var(--basic-greylight);
+}
 
 .registration-link {
   padding: 12px 24px;
@@ -1037,6 +1035,7 @@ input[type="radio"].visually-hidden {
 .modal-feedback {
   width: 620px;
   margin: 0 auto;
+  padding-top: 39px;
 }
 
 .feedback-grid {
@@ -1062,21 +1061,33 @@ input[type="radio"].visually-hidden {
   color: var(--basic-grey);
 }
 
-.modal-form-name {
-  grid-column: 1 / 2;
+.mail-form textarea {
+  height: 114px;
 }
 
-.modal-forme-mail {
+.modal-form-name {
+  grid-column: 1 / 2;
+  margin: 0;
+  margin-bottom: 13px;
+}
+
+.modal-form-mail {
   grid-column: 2 / -1;
+  margin: 0;
+  margin-bottom: 13px;
 }
 
 .modal-form-text {
   grid-column: 1 /-1;
+  margin: 0;
+  margin-bottom: 35px;
 }
 
 .modal-label {
+  display: block;
   font-size: 18px;
   line-height: 24px;
+  margin-bottom: 18px;
 }
 
 .modal-button-block {
@@ -1103,6 +1114,40 @@ input[type="radio"].visually-hidden {
 
 /* HEADER CATALOG */
 
+.personal-account {
+  justify-self: end;
+  position: relative;
+  width: 300px;
+}
+
+.personal-accaunt-button {
+  position: absolute;
+  top: 13px;
+  left: 15px;
+  width: 20px;
+  height: 18px;
+  background-color: transparent;
+  border: none;
+}
+
+.personal-accaunt-button:hover svg {
+  fill: var(--basic-dark-grey);
+}
+
+.login-out-button {
+  position: absolute;
+  top: 14px;
+  right: 17px;
+  width: 20px;
+  height: 17px;
+  background-color: transparent;
+  border: none;
+}
+
+.login-out-button:hover svg {
+  fill: var(--basic-dark-grey);
+}
+
 .personal-account-ladel {
   font-size: 16px;
   line-height: 18px;
@@ -1118,15 +1163,28 @@ input[type="radio"].visually-hidden {
 }
 
 .personal-account-input {
+  width: 300px;
+  padding: 12px 56px;
+  box-sizing: border-box;
   font-size: 21px;
   line-height: 21px;
+  border: none;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+
+.personal-account-input::placeholder {
+  color: var(--basic-black);
 }
 
 /* MAIN CATALOG */
 
 .bread-crumbs {
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .bread-crumbs-link {
