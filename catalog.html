@@ -34,7 +34,7 @@
             <a class="buyer-assistance-link bookmarks" href="#">Закладки: <span.>0</span.></a>
           </li>
           <li class="buyer-assistance-item">
-            <a class="buyer-assistance-link basket filled-basket" href="#">Карзина: <span>10</span></a>
+            <a class="buyer-assistance-link basket filled-basket" href="#">Корзина: <span>10</span></a>
           </li>
           <li class="buyer-assistance-item">
             <a class="buyer-assistance-link place-order" href="#">Оформить заказ</a>
@@ -252,8 +252,12 @@
           <h3 class="visually-hidden">Список товаров</h3>
           <ul class="catalog-list">
             <li class="catalog-item folder-cell">
-              <a href="#"><img class="img-bfg6000" src="img/BFG-6000.png" alt="Внешний вид перфоратора." width="144"
-                  height="128"></a>
+              <div class="folder-cell-link-block">
+                <a class="folder-cell-link-buy js-link-buy" href="#">Купить</a>
+                <a class="folder-cell-link-bookmarks" href="#">Закладки</a>
+              </div>
+              <img class="folder-cell-img img-bfg6000" src="img/BFG-6000.png" alt="Внешний вид перфоратора." width="144"
+                height="128">
               <p class="product-name">
                 <span>Перфоратор&nbsp;BOSCH BFG 6000</span>
                 <del class="previous-price">30500 Р.</del>
@@ -454,11 +458,13 @@
     </section>
   </footer>
 
-  <section class="modal cart-notice">
-    <h2 class="cart-notice-title">Товар добавлен в корзину!</h2>
-    <div class="cart-notice-button-block modal-button-block">
-      <button class="button arrange" type="button">Оформить заказ</button>
-      <button class="button continue-shopping" type="button">Продолжить покупки</button>
+  <section class="modal cart-notice js-cart-notice modal-hidden">
+    <div class="cart-notice-positioning">
+      <h2 class="cart-notice-title">Товар добавлен в корзину!</h2>
+      <div class="cart-notice-button-block modal-button-block">
+        <button class="button arrange" type="button">Оформить заказ</button>
+        <button class="button continue-shopping" type="button">Продолжить покупки</button>
+      </div>
       <button class="modal-close" type="button">Закрыть</button>
     </div>
   </section>

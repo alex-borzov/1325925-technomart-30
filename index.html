@@ -34,7 +34,7 @@
             <a class="buyer-assistance-link bookmarks" href="#">Закладки: <span>0</span></a>
           </li>
           <li class="buyer-assistance-item">
-            <a class="buyer-assistance-link basket" href="#">Карзина: <span>0</span></a>
+            <a class="buyer-assistance-link basket" href="#">Корзина: <span>0</span></a>
           </li>
           <li class="buyer-assistance-item">
             <a class="buyer-assistance-link place-order" href="#">Оформить заказ</a>
@@ -92,7 +92,7 @@
             <a class="offers-link" href="#">На любой вкус</a>
           </li>
           <li class="offers-item offers-item-tools">
-            <h3 class="offers-item-title">Инструменты</h3>
+            <h3 class="offers-item-title">Инструмент</h3>
             <a class="offers-link" href="#">На все случаи </a>
           </li>
           <li class="offers-item offers-item-mashinery">
@@ -109,9 +109,33 @@
           </li>
 
           <li class="offers-slider">
-            <div class="slider">
-              <img src="img/perforator.jpg" alt="Строитель сверлит бетонную стену перфоратором" width="620"
-                height="266">
+            <div class="slider-container">
+              <ul class="slider">
+                <li class="slider-item slider-item--first slider-item--active">
+                  <h3 class="slider-title">Дрели</h3>
+                  <p class="slider-text">Соседям на радость!</p>
+                  <a class="slider-link button" href="#">Открыть каталог</a>
+                </li>
+                <li class="slider-item slider-item--second">
+                  <h3 class="slider-title">Перфораторы</h3>
+                  <p class="slider-text">Настоящие мужские игрушки</p>
+                  <a class="slider-link button" href="#">Открыть каталог</a>
+                </li>
+              </ul>
+
+              <a class="slider-arrow slider-arrow--left" href="#" aria-label="Предыдущий экран слайдера"></a>
+              <a class="slider-arrow slider-arrow--right" href="#" aria-label="Следующий экран слайдера"></a>
+
+              <ul class="slider-pager">
+                <li class="slider-pager-item ">
+                  <a class="slider-pager-link slider-pager-link--first slider-pager-link--active" href="#"
+                    aria-label="Первый экран слайдера" data-screen="slider-item--first"></a>
+                </li>
+                <li class="slider-pager-item">
+                  <a class="slider-pager-link slider-pager-link--second" href="#" aria-label="Второй экран слайдера"
+                    data-screen="slider-item--second"></a>
+                </li>
+              </ul>
             </div>
           </li>
         </ul>
@@ -126,9 +150,12 @@
 
         <ul class="popular-products-list">
           <li class="popular-products-item folder-cell">
-            <a href="#">
-              <img class="img-bfg9000" src="img/BFG-9000.png" alt="Внешний вид перфоратора." width="184" height="164">
-            </a>
+            <div class="folder-cell-link-block">
+              <a class="folder-cell-link-buy js-link-buy" href="#">Купить</a>
+              <a class="folder-cell-link-bookmarks" href="#">Закладки</a>
+            </div>
+            <img class=" folder-cell-img img-bfg9000" src="img/BFG-9000.png" alt="Внешний вид перфоратора." width="184"
+              height="164">
             <p class="product-name">
               <span>Перфоратор&nbsp;BOSCH BFG 9000</span>
               <del class="previous-price">32500 Р.</del>
@@ -226,15 +253,22 @@
           стараемся изо всех сил, чтобы сделать ваши покупки приятными.
         </p>
         <div class="services-slider">
+
           <ul class="services-slider-list">
-            <li class="services-slider-item services-slider-item-selected">
-              Доставка
+            <li class="services-slider-item services-slider-item--active">
+              <a class="services-slider-link services-slider-link--selected" href="#"
+                data-slide="slider-element-item--first">Доставка</a>
             </li>
-            <li class="services-slider-item">Гарантия</li>
-            <li class="services-slider-item">Кредит</li>
+            <li class="services-slider-item">
+              <a class="services-slider-link" href="#" data-slide="slider-element-item--second">Гарантия</a>
+            </li>
+            <li class="services-slider-item">
+              <a class="services-slider-link" href="#" data-slide="slider-element-item--third">Кредит</a>
+            </li>
           </ul>
+
           <ul class="slider-element-list">
-            <li>
+            <li class="slider-element-item slider-element-item--first slider-element-item--active">
               <h3 class="section-title slider-element-title">Доставка</h3>
               <p class="paragraph-text slider-element-text">
                 Мы с удовольствием доставим ваш товар прямо к вашему подъезду
@@ -242,15 +276,20 @@
                 его на этаж!
               </p>
             </li>
-            <li class="visually-hidden">
+            <li class="slider-element-item slider-element-item--second">
               <h3 class="section-title slider-element-title">Гарантия</h3>
-              <p></p>
+              <p class="paragraph-text slider-element-text">Если купленный у нас товар поломается или заискрит, а также
+                в случае пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы
+                обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
             </li>
-            <li class="visually-hidden">
+            <li class="slider-element-item slider-element-item--third">
               <h3 class="section-title slider-element-title">Кредит</h3>
-              <p></p>
+              <p class="paragraph-text slider-element-text">Залезть в долговую яму стало проще! Кредитные
+                консультанты придут вам на помощь.</p>
+              <a href="#" class="button credit-request">Отправить заявку</a>
             </li>
           </ul>
+
         </div>
       </div>
     </section>
@@ -258,7 +297,7 @@
     <div class="index-columns container">
       <section class="about-company">
         <h2 class="section-title adout-company-title">
-          Компания&laquo;Техномарт&raquo;
+          Компания &laquo;Техномарт&raquo;
         </h2>
         <p class="paragraph-text about-company-lead">
           Настоящий мужской шопинг начинается здесь! Огромный выбор товаров
@@ -282,8 +321,10 @@
         <p class="paragraph-text">
           Вы можете забрать товар сами, заехав в наш офис:
         </p>
-        <img class="contacts-map" src="img/contacts-map.png" alt="карта расположения офиса." width="300" height="158">
-        <a class="contacts-link button" href="#">Заблудились? Напишите нам!</a>
+        <a class="contacts-link-map js-link-map" href="#">
+          <img class="contacts-map" src="img/contacts-map.png" alt="карта расположения офиса." width="300" height="158">
+        </a>
+        <a class="contacts-link button js-contacts-link" href="#">Заблудились? Напишите нам!</a>
       </section>
     </div>
   </main>
@@ -372,35 +413,41 @@
     </section>
   </footer>
 
-  <section class="modal modal-feedback">
-    <h2 class="visually-hidden">Обратная связь</h2>
-    <form class="mail-form" action="https://echo.htmlacademy.ru" method="post">
-      <div class="feedback-grid">
-        <p class="modal-form-name">
-          <label class="modal-label" for="name">Ваше имя</label>
-          <input id="name" name="name" type="text" placeholder="Имя Фамилия">
-        </p>
-        <p class="modal-form-mail">
-          <label class="modal-label" for="login">Ваш e-mail:</label>
-          <input id="login" name="login" type="email" placeholder="email@example.com">
-        </p>
-        <p class="modal-form-text">
-          <label class="modal-label" for="text-mail">Текст письма:</label>
-          <textarea name="text" id="text-mail" cols="30" rows="10" placeholder="В свободной форме"></textarea>
-        </p>
-      </div>
-      <div class="modal-button-block">
-        <button class="button button-send" type="submit">Отправить</button>
-        <button class="modal-close" type="button">Закрыть</button>
-      </div>
-    </form>
+  <section class="modal modal-feedback modal-hidden js-modal-feedback">
+    <div class="modal-positioning">
+      <h2 class="visually-hidden">Обратная связь</h2>
+      <form class="mail-form" action="https://echo.htmlacademy.ru" method="post">
+        <div class="feedback-grid">
+          <p class="modal-form-name">
+            <label class="modal-label" for="name">Ваше имя</label>
+            <input id="name" name="name" type="text" placeholder="Имя Фамилия">
+          </p>
+          <p class="modal-form-mail">
+            <label class="modal-label" for="login">Ваш e-mail:</label>
+            <input id="login" name="login" type="email" placeholder="email@example.com">
+          </p>
+          <p class="modal-form-text">
+            <label class="modal-label" for="text-mail">Текст письма:</label>
+            <textarea name="text" id="text-mail" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+          </p>
+        </div>
+        <div class="modal-button-block">
+          <button class="button button-send" type="submit">Отправить</button>
+          <button class="modal-close js-feedback-close" type="button">Закрыть</button>
+        </div>
+      </form>
+    </div>
   </section>
 
-  <section class="modal modal-map">
-    <h2 class="visually-hidden">Как до нас добраться</h2>
-    <!-- карта -->
-    <button class="modal-close" type="button">Закрыть</button>
+  <section class="modal modal-map modal-hidden js-modal-map">
+    <div class="modal-positioning">
+      <h2 class="visually-hidden">Как до нас добраться</h2>
+      <!-- карта -->
+      <button class="modal-close js-map-close" type="button">Закрыть</button>
+    </div>
   </section>
+
+  <script src="./js/script.js"></script>
 </body>
 
 </html>
