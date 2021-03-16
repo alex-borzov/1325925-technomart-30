@@ -3,14 +3,15 @@ const sliderArrows = document.querySelectorAll(".slider-arrow");
 const keys = document.querySelectorAll(".services-slider-link");
 const modalFeedback = document.querySelector(".js-modal-feedback");
 const buttonCallModalFeedback = document.querySelector(".js-contacts-link");
-const buttonCloseModalFeedback = document.querySelector(".js-feedback-close");
 const modalMap = document.querySelector(".js-modal-map");
 const buttonCallModalMap = document.querySelector(".js-link-map");
-const buttonCloseModalMap = document.querySelector(".js-map-close");
-const modalBasket = document.querySelector(".js-cart-notice");
-const buttonCollModalBasket = document.querySelectorAll(".js-link-buy");
+const modalCart = document.querySelector(".js-cart-notice");
+const buttonCallModalCart = document.querySelectorAll(".js-link-buy");
+const buttonCloseModal = document.querySelectorAll(".modal-close");
+const sortSwitches = document.querySelectorAll(".sort-button");
+const sortLinks = document.querySelectorAll(".sort-link");
 
-console.log(buttonCallModalFeedback);
+// console.log(buttonCallModalFeedback);
 
 bullits.forEach(function (bullit, i) {
   bullit.addEventListener("click", function (evt) {
@@ -66,28 +67,62 @@ keys.forEach(function (key, i) {
   });
 });
 
-buttonCallModalFeedback.addEventListener("click", function (evt) {
-  console.log(evt);
-  evt.preventDefault();
-  modalFeedback.classList.remove("modal-hidden");
-});
+if (buttonCallModalFeedback) {
+  buttonCallModalFeedback.addEventListener("click", function (evt) {
+    console.log(buttonCallModalFeedback);
+    console.log(modalFeedback);
+    evt.preventDefault();
+    modalFeedback.classList.add("modal-show");
+  });
+}
 
-buttonCloseModalFeedback.addEventListener("click", function () {
-  modalFeedback.classList.add("modal-hidden");
-});
+if (buttonCallModalMap) {
+  buttonCallModalMap.addEventListener("click", function (evt) {
+    console.log(evt);
+    evt.preventDefault();
+    modalMap.classList.add("modal-show");
+  });
+}
 
-buttonCallModalMap.addEventListener("click", function (evt) {
-  console.log(evt);
-  evt.preventDefault();
-  modalMap.classList.remove("modal-hidden");
-});
+if (buttonCallModalCart) {
+  buttonCallModalCart.forEach(function (button) {
+    button.addEventListener("click", function (evt) {
+      console.log(evt);
+      evt.preventDefault();
+      modalCart.classList.add("modal-show");
+    });
+  });
+}
 
-buttonCloseModalMap.addEventListener("click", function () {
-  modalMap.classList.add("modal-hidden");
-});
+if (buttonCloseModal) {
+  buttonCloseModal.forEach(function (buttonClose) {
+    buttonClose.addEventListener("click", function (evt) {
+      this.parentElement.parentElement.classList.remove("modal-show");
+    });
+  });
+}
 
-buttonCollModalBasket.addEventListener("click", function (evt) {
-  console.log(evt);
-  evt.preventDefault();
-  modalBasket.classList.remove("modal-hidden");
-});
+if (sortSwitches) {
+  sortSwitches.forEach(function (sortswitch, i) {
+    sortswitch.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      // console.log(this.dataset.screen);
+      document
+        .querySelector(".sort-button--active")
+        .classList.remove("sort-button--active");
+      this.classList.add("sort-button--active");
+    });
+  });
+}
+
+if (sortLinks) {
+  sortLinks.forEach(function (sortLink, i) {
+    sortLink.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      document
+        .querySelector(".sort-selected")
+        .classList.remove("sort-selected");
+      this.classList.add("sort-selected");
+    });
+  });
+}
