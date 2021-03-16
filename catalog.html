@@ -11,8 +11,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:wght@400;700&display=swap&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body class="page-body">
@@ -92,7 +92,7 @@
   </header>
 
   <main class="page-catalog">
-    <div class="container">
+    <div class="container-s">
       <h1 class="visually-hidden">Большой выбор товаров на любой вкус</h1>
       <ul class="bread-crumbs">
         <li class="bread-crumbs-item bread-crumbs-item--home">
@@ -120,16 +120,20 @@
                       margin-left: 0%;">
                     </div>
                   </div>
-                  <div class="toggle toggle-min" tabindex="0" style="
-                  margin-left: 8%;"></div>
-                  <div class="toggle toggle-max" tabindex="0" style="
+                  <a class="toggle toggle-min" href="#" aria-label="Настройка минимальной цены" tabindex="0" style="
+                  margin-left: 8%;"></a>
+                  <a class="toggle toggle-max" href="#" aria-label="Настройка максимальной цены" tabindex="0" style="
                   margin-left: 72%;">
-                  </div>
+                  </a>
                 </div>
                 <div class="price-controls">
-                  <label for=""><input class="price-controls-input" type="number" value="" placeholder="0"></label>
+                  <label for="min-price">
+                    <input class="price-controls-input" id="min-price" name="min-price" type="number" value="0">
+                  </label>
                   <span>&#8211;</span>
-                  <label for=""><input class="price-controls-input" type="number" value="" placeholder="3000"></label>
+                  <label for="max-price">
+                    <input class="price-controls-input" id="max-price" name="max-price" type="number" value="3000">
+                  </label>
                 </div>
               </div>
             </fieldset>
@@ -538,7 +542,7 @@
     </div>
   </section>
 
-  <script src="./js/script.js"></script>
+  <script src="./js/script.min.js"></script>
 </body>
 
 </html>

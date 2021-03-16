@@ -10,6 +10,10 @@ const buttonCallModalCart = document.querySelectorAll(".js-link-buy");
 const buttonCloseModal = document.querySelectorAll(".modal-close");
 const sortSwitches = document.querySelectorAll(".sort-button");
 const sortLinks = document.querySelectorAll(".sort-link");
+const mailForm = document.querySelector(".mail-form");
+const name = document.querySelector(".name");
+const email = document.querySelector(".email");
+const text = document.querySelector(".text");
 
 // console.log(buttonCallModalFeedback);
 
@@ -69,9 +73,8 @@ keys.forEach(function (key, i) {
 
 if (buttonCallModalFeedback) {
   buttonCallModalFeedback.addEventListener("click", function (evt) {
-    console.log(buttonCallModalFeedback);
-    console.log(modalFeedback);
     evt.preventDefault();
+    modalFeedback.classList.remove("modal-error");
     modalFeedback.classList.add("modal-show");
   });
 }
@@ -124,5 +127,19 @@ if (sortLinks) {
         .classList.remove("sort-selected");
       this.classList.add("sort-selected");
     });
+  });
+}
+
+if (mailForm) {
+  name.required = false;
+  email.required = false;
+  text.required = false;
+  mailForm.addEventListener("submit", function (evt) {
+    if (!name.value || !email.value || !text.value) {
+      evt.preventDefault();
+      modalFeedback.classList.remove("modal-error");
+      modalFeedback.offsetWidth = modalFeedback.offsetWidth;
+      modalFeedback.classList.add("modal-error");
+    }
   });
 }

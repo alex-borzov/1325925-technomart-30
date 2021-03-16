@@ -11,8 +11,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:wght@400;700&display=swap&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body class="page-body">
@@ -459,16 +459,16 @@
         <div class="feedback-grid">
           <p class="modal-form-name">
             <label class="modal-label" for="name">Ваше имя</label>
-            <input class="mail-form-input" id="name" name="name" type="text" placeholder="Имя Фамилия" required>
+            <input class="mail-form-input name" id="name" name="name" type="text" placeholder="Имя Фамилия" required>
           </p>
           <p class="modal-form-mail">
             <label class="modal-label" for="login">Ваш e-mail:</label>
-            <input class="mail-form-input" id="login" name="login" type="email" placeholder="email@example.com"
+            <input class="mail-form-input email" id="login" name="login" type="email" placeholder="email@example.com"
               required>
           </p>
           <p class="modal-form-text">
             <label class="modal-label" for="text-mail">Текст письма:</label>
-            <textarea class="mail-form-textarea" name="text" id="text-mail" cols="30" rows="10"
+            <textarea class="mail-form-textarea text" name="text" id="text-mail" cols="30" rows="10"
               placeholder="В свободной форме" required></textarea>
           </p>
         </div>
@@ -491,7 +491,18 @@
     </div>
   </section>
 
-  <script src="./js/script.js"></script>
+  <section class="modal cart-notice js-cart-notice">
+    <div class="cart-notice-positioning">
+      <h2 class="cart-notice-title">Товар добавлен в корзину!</h2>
+      <div class="cart-notice-button-block">
+        <button class="button arrange" type="button">Оформить заказ</button>
+        <button class="button continue-shopping" type="button">Продолжить покупки</button>
+      </div>
+      <button class="modal-close" type="button">Закрыть</button>
+    </div>
+  </section>
+
+  <script src="./js/script.min.js"></script>
 </body>
 
 </html>

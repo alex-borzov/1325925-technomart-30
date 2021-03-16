@@ -449,7 +449,6 @@ input[type="radio"].visually-hidden {
   overflow: hidden;
 }
 
-
 .container-s {
   width: 940px;
   margin: 0 auto;
@@ -1404,6 +1403,7 @@ a {
 .footer-developer-link {
   display: inline-block;
   margin-top: 2px;
+  vertical-align: middle;
   color: var(--basic-dark-yellow);
 }
 
@@ -1438,6 +1438,10 @@ a {
 .modal-show {
   display: block;
   animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
 }
 
 .modal-feedback {
@@ -1549,6 +1553,28 @@ a {
   }
 }
 
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
 /* CATALOG */
 
 /* HEADER CATALOG */
@@ -1564,6 +1590,7 @@ a {
 
 .personal-accaunt-link {
   display: inline-block;
+  vertical-align: middle;
   width: 300px;
   margin-bottom: 4px;
   padding: 11px 56px 13px;
@@ -1698,6 +1725,7 @@ a {
 .bread-crumbs-link {
   position: relative;
   display: inline-block;
+  vertical-align: middle;
   font-size: 13px;
   line-height: 18px;
   color: var(--basic-black);
@@ -1721,6 +1749,7 @@ a {
 
 .bread-crumbs-main {
   display: inline-block;
+  vertical-align: middle;
   width: 14px;
   height: 18px;
   background-image: url("../img/icon-home.svg");
@@ -1861,6 +1890,7 @@ a {
 
 .label-option {
   display: inline-block;
+  vertical-align: middle;
   margin-bottom: 18px;
   font-size: 15px;
   line-height: 19px;
@@ -2067,6 +2097,7 @@ a {
 .sort-button {
   position: relative;
   display: inline-block;
+  vertical-align: middle;
   width: 11px;
   height: 10px;
   margin-top: 14px;
@@ -2157,6 +2188,7 @@ a {
 
 .pagination-link {
   display: inline-block;
+  vertical-align: middle;
   padding: 9px 15px 9px;
   color: var(--basic-black);
   border: 1px solid var(--basic-border);
