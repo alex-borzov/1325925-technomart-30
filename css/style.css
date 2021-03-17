@@ -7,7 +7,7 @@
 
   --basic-cloudy: #f1f5f7;
   --basic-border: #e5e5e5;
-  --basic-checked: #b5b5b5;
+  --basic-disabled: #b5b5b5;
   --basic-greylight: #c5c5c5;
   --basic-grey: #a9a9a9;
   --basic-dark-grey: #3d546f;
@@ -35,6 +35,7 @@
 
   --basic-shadow: rgba(0, 0, 0, 0.15);
   --basic-bottom-line: rgba(0, 0, 0, 0.24);
+  --basic-ladel-disabled: rgba(0, 0, 0, 0.4);
   --basic-transparent-white-text: rgba(255, 255, 255, 0.5);
   --basic-transparent-black-text: rgba(0, 0, 0, 0.3);
   --basic-transparent-cloudy-text: rgba(241, 245, 247, 0.5);
@@ -302,7 +303,7 @@ input[type="radio"].visually-hidden {
   font-family: Cuprum, Arial, sans-serif;
   font-style: italic;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 23px;
   color: var(--basic-red);
 }
 
@@ -760,7 +761,7 @@ a {
 }
 
 .section-block-link {
-  width: 192px;
+  min-width: 192px;
   padding: 11px 5px 10px;
 }
 
@@ -1026,10 +1027,12 @@ a {
 }
 
 .paragraph-text {
+  position: relative;
   margin: 0;
   font-size: 13px;
-  line-height: 25px;
+  line-height: 24px;
   font-family: "PT Sans", Arial, sans-serif;
+  z-index: 10;
 }
 
 .services-lead {
@@ -1111,6 +1114,7 @@ a {
   display: block;
   background-repeat: no-repeat;
   background-position: 0 0;
+  z-index: 1;
 }
 
 .slider-element-item--active {
@@ -1153,6 +1157,7 @@ a {
 .credit-request {
   width: 194px;
   margin-top: 25px;
+  margin-bottom: 20px;
   padding-left: 12px;
   padding-right: 10px;
   padding-top: 12px;
@@ -1426,6 +1431,7 @@ a {
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: 100;
   display: none;
   margin: auto;
   font-size: 18px;
@@ -1451,7 +1457,7 @@ a {
 
 .modal-feedback-positioning {
   position: relative;
-  padding-top: 45px;
+  padding-top: 39px;
 }
 
 .feedback-grid {
@@ -1467,7 +1473,7 @@ a {
   width: 100%;
   padding: 3px 5px 6px 10px;
   box-sizing: border-box;
-  font-family: "PT Sans";
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
   border: 2px solid var(--basic-greylight);
@@ -1854,8 +1860,8 @@ a {
 }
 
 .price-controls-input {
-  width: 53px;
-  padding: 10px 21px;
+  width: 96px;
+  padding: 9px 2px 11px 4px;
   text-align: center;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 17px;
@@ -1864,6 +1870,7 @@ a {
   background-color: var(--basic-beige);
   border: none;
   border-radius: 3px;
+  box-sizing: border-box;
 }
 
 .price-controls-input::placeholder {
@@ -1874,24 +1881,24 @@ a {
 
 .filter-manufacturers {
   margin-bottom: 18px;
-  padding-bottom: 11px;
+  padding-bottom: 8px;
 }
 
 .filter-manufacturers-list {
   margin: 0;
-  margin-top: 17px;
+  margin-top: 18px;
   padding: 0;
   list-style: none;
 }
 
 .filter-checkbox {
   position: relative;
+  margin-bottom: 15px;
 }
 
 .label-option {
   display: inline-block;
-  vertical-align: middle;
-  margin-bottom: 18px;
+  vertical-align: top;
   font-size: 15px;
   line-height: 19px;
   text-transform: uppercase;
@@ -1903,7 +1910,7 @@ a {
 
 .check-box {
   position: absolute;
-  top: 0;
+  top: -2px;
   left: 0;
   width: 27px;
   height: 23px;
@@ -1931,7 +1938,7 @@ a {
 }
 
 .check-input:disabled ~ * .check-square {
-  fill: var(--basic-checked);
+  fill: var(--basic-disabled);
   opacity: 0.4;
 }
 
@@ -1944,20 +1951,20 @@ a {
 }
 
 .check-input:checked:disabled ~ * .check-mark {
-  fill: var(--basic-checked);
+  fill: var(--basic-disabled);
   opacity: 0.4;
 }
 
 .check-input:disabled + .check {
-  color: rgba(0, 0, 0, 0.4);
+  color: var(--basic-ladel-disabled);
 }
 
 .check:hover + * .check-square {
-  fill: var(--basic-checked);
+  fill: var(--basic-disabled);
 }
 
 .check-input:checked + .check:hover ~ * .check-mark {
-  fill: var(--basic-checked);
+  fill: var(--basic-disabled);
 }
 
 .check-input:checked + .check:hover ~ * .check-square {
@@ -1967,7 +1974,7 @@ a {
 /* Filter power */
 
 .filter-power {
-  margin-bottom: 22px;
+  margin-bottom: 18px;
   border: none;
 }
 
@@ -1980,6 +1987,7 @@ a {
 
 .filter-power-item {
   position: relative;
+  margin-bottom: 17px;
 }
 
 .radio-label {
@@ -2018,6 +2026,21 @@ a {
 .radio-input:focus ~ .radio {
   box-shadow: 0 0 0 5px var(--basic-light-green);
   border-radius: 50%;
+}
+
+.radio-input:disabled ~ * .radio-circle {
+  fill: var(--basic-disabled);
+  opacity: 0.4;
+}
+
+.radio-input:checked:disabled ~ * .radio-mark {
+  fill: var(--basic-disabled);
+  opacity: 0.4;
+}
+
+
+.radio-input:disabled + .radio-label {
+  color: var(--basic-ladel-disabled)
 }
 
 .button-show {
@@ -2237,14 +2260,13 @@ a {
   position: relative;
   display: flex;
   flex-direction: column;
-  text-align: center;
 }
 
 .cart-notice-title {
   position: relative;
   align-self: flex-start;
   margin: 0;
-  padding: 73px 5px 67px 178px;
+  padding: 66px 5px 68px 178px;
   font-weight: bold;
   font-size: 24px;
   line-height: 30px;
@@ -2253,7 +2275,7 @@ a {
 .cart-notice-title::before {
   position: absolute;
   content: "";
-  top: 55px;
+  top: 48px;
   left: 82px;
   width: 66px;
   height: 66px;
@@ -2262,19 +2284,19 @@ a {
 
 .cart-notice-button-block {
   background-color: #f1f1f1;
-  padding: 37px 0;
-  padding-left: 5px;
+  padding: 37px 0 44px;
 }
 
 .arrange {
   width: 192px;
   padding: 11px 46px 9px 47px;
-  margin-right: 10px;
+  margin-right: 5px;
+  margin-left: 116px;
 }
 
 .continue-shopping {
   width: 192px;
-  padding: 11px 25px 9px 20px;
+  padding: 10px 25px 9px 26px;
   background-color: var(--basic-white);
   color: var(--basic-black);
 }
@@ -2285,7 +2307,7 @@ a {
 
 .modal-close {
   position: absolute;
-  top: 19px;
+  top: 14px;
   right: 10px;
   width: 21px;
   height: 21px;

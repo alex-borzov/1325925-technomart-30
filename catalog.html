@@ -128,11 +128,11 @@
                 </div>
                 <div class="price-controls">
                   <label for="min-price">
-                    <input class="price-controls-input" id="min-price" name="min-price" type="number" value="0">
+                    <input class="price-controls-input" id="min-price" name="min-price" type="text" value="0">
                   </label>
-                  <span>&#8211;</span>
+                  <span>&mdash;</span>
                   <label for="max-price">
-                    <input class="price-controls-input" id="max-price" name="max-price" type="number" value="3000">
+                    <input class="price-controls-input" id="max-price" name="max-price" type="text" value="30000">
                   </label>
                 </div>
               </div>
@@ -271,7 +271,7 @@
 
               <li class="catalog-item card">
                 <div class="card-img-container">
-                  <img class="card-img" src="img/bfg-6000.png" alt="Внешний вид перфоратора." width="144" height="128">
+                  <img class="card-img" src="img/bfg-6000.jpg" alt="Внешний вид перфоратора." width="144" height="128">
                 </div>
                 <div class="card-link-block">
                   <a class="card-link-buy js-link-buy" href="#">Купить</a>
@@ -286,7 +286,7 @@
 
               <li class="catalog-item card">
                 <div class="card-img-container">
-                  <img class="card-img" src="img/bfg-6000.png" alt="Внешний вид перфоратора." width="144" height="128">
+                  <img class="card-img" src="img/bfg-6000.jpg" alt="Внешний вид перфоратора." width="144" height="128">
                 </div>
                 <div class="card-link-block">
                   <a class="card-link-buy js-link-buy" href="#">Купить</a>
@@ -301,7 +301,7 @@
 
               <li class="catalog-item card product-new">
                 <div class="card-img-container">
-                  <img class=" card-img" src="img/bfg-6000.png" alt="Внешний вид перфоратора." width="144" height="128">
+                  <img class=" card-img" src="img/bfg-6000.jpg" alt="Внешний вид перфоратора." width="144" height="128">
                 </div>
                 <div class="card-link-block">
                   <a class=" card-link-buy js-link-buy" href="#">Купить</a>
@@ -316,7 +316,7 @@
 
               <li class="catalog-item card product-new">
                 <div class="card-img-container">
-                  <img class="card-img" src="img/bfg-3000.png" alt="Внешний вид перфоратора." width="127" height="112">
+                  <img class="card-img" src="img/bfg-3000.jpg" alt="Внешний вид перфоратора." width="127" height="112">
                 </div>
                 <div class="card-link-block">
                   <a class="card-link-buy js-link-buy" href="#">Купить</a>
@@ -331,7 +331,7 @@
 
               <li class="catalog-item card">
                 <div class="card-img-container">
-                  <img class="card-img" src="img/bfg-6000.png" alt="Внешний вид перфоратора." width="144" height="128">
+                  <img class="card-img" src="img/bfg-6000.jpg" alt="Внешний вид перфоратора." width="144" height="128">
                 </div>
                 <div class="card-link-block">
                   <a class="card-link-buy js-link-buy" href="#">Купить</a>
@@ -346,8 +346,7 @@
 
               <li class="catalog-item card product-new">
                 <div class="card-img-container">
-                  <img class="folder-cell-img img-new" src="img/bfg-2000.png" alt="Внешний вид перфоратора." width="127"
-                    height="112">
+                  <img class="card-img" src="img/bfg-2000.jpg" alt="Внешний вид перфоратора." width="127" height="112">
                 </div>
                 <div class="card-link-block">
                   <a class="card-link-buy js-link-buy" href="#">Купить</a>
@@ -362,7 +361,7 @@
 
               <li class="catalog-item card product-new">
                 <div class="card-img-container">
-                  <img class="card-img" src="img/bfg-3000.png" alt="Внешний вид перфоратора." width="127" height="112">
+                  <img class="card-img" src="img/bfg-3000.jpg" alt="Внешний вид перфоратора." width="127" height="112">
                 </div>
                 <div class="card-link-block">
                   <a class="card-link-buy js-link-buy" href="#">Купить</a>
@@ -377,7 +376,7 @@
 
               <li class="catalog-item card">
                 <div class="card-img-container">
-                  <img class="card-img" src="img/bfg-6000.png" alt="Внешний вид перфоратора." width="144" height="128">
+                  <img class="card-img" src="img/bfg-6000.jpg" alt="Внешний вид перфоратора." width="144" height="128">
                 </div>
                 <div class="card-link-block">
                   <a class="card-link-buy js-link-buy" href="#">Купить</a>
@@ -392,8 +391,7 @@
 
               <li class="catalog-item card product-new">
                 <div class="card-img-container">
-                  <img class="folder-cell-img img-new" src="img/bfg-2000.png" alt="Внешний вид перфоратора." width="127"
-                    height="112">
+                  <img class="card-img" src="img/bfg-2000.jpg" alt="Внешний вид перфоратора." width="127" height="112">
                 </div>
                 <div class="card-link-block">
                   <a class="card-link-buy js-link-buy" href="#">Купить</a>
@@ -535,8 +533,8 @@
     <div class="cart-notice-positioning">
       <h2 class="cart-notice-title">Товар добавлен в корзину!</h2>
       <div class="cart-notice-button-block">
-        <button class="button arrange" type="button">Оформить заказ</button>
-        <button class="button continue-shopping" type="button">Продолжить покупки</button>
+        <a class="button arrange" href="#">Оформить заказ</a>
+        <a class="button continue-shopping" href="#">Продолжить покупки</a>
       </div>
       <button class="modal-close" type="button">Закрыть</button>
     </div>
